@@ -1,0 +1,156 @@
+body {
+  padding: 2em 2em 0 2em;
+  background-image: linear-gradient(45deg, #EEE 0%, #888 100%);
+  display: grid;
+  justify-content: center;
+}
+
+main {
+  border-radius: 1%;
+  background: white;
+  aspect-ratio: 8.5 / 11;
+  padding: 2em;
+  min-width: 80ch;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0 0 0.25em 0;
+}
+
+h1 {
+  font-family: 'Bebas Neue';
+  font-size: 70;
+}
+
+h2 {
+  font-family: 'Bebas Neue';
+  font-size: 30;
+}
+
+h3 {
+  font-family: 'Montserrat';
+  font-size: 30;
+}
+
+span.location-details {
+  font-family: 'Montserrat';
+  text-transform: uppercase;
+  font-size: 12;
+}
+
+h4 {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-size: 22;
+  font-weight: 300;
+}
+
+h5 {
+  font-family: 'Montserrat';
+  font-size: 14;
+  font-weight: 100;
+}
+
+
+p {
+  font-family: 'Montserrat';
+  font-size: 16;
+  max-width: 60ch;
+}
+
+p + p {
+  margin-top: 0.5em;
+}
+
+section {
+  display: grid;
+  grid-template-columns: minmax(auto, 20ch) minmax(80ch, 1fr);
+  column-gap: 2em;
+}
+
+section.name-section {
+  grid-template-areas:
+    ". name"
+    ". contact-details"
+  ;
+}
+
+h1.name {
+  grid-area: name;
+}
+
+div.contact-details {
+  grid-area: contact-details;
+  display: flex;
+}
+
+div.contact-details > * {
+  margin-right: 1em;
+}
+
+section.generic-section {
+  padding-top: 2em;
+  grid-template-areas:
+    ". title"
+    "content content"
+  ;
+}
+
+h2.section-title {
+  grid-area: title;
+}
+
+div.section-content {
+  grid-area: content
+}
+
+section.experience-section {
+  grid-template-areas:
+    "date company"
+    ". details"
+  ;
+}
+
+section.experience-section + section.experience-section {
+  margin-top: 1em;
+}
+
+section.experience-section.internship {
+  filter: opacity(70%);
+}
+
+h5.date {
+  grid-area: date;
+  justify-self: end;
+  align-self: center;
+}
+
+h4.company {
+  grid-area: company;
+}
+
+div.experience-details {
+  grid-area: details;
+}
+
+section.skills-section {
+  grid-template-areas:
+    ". languages"
+    ". tools-libs"
+  ;
+  row-gap: 1em;
+}
+
+.languages {
+  grid-area: languages
+}
+
+.tools-libs {
+  grid-area: tools-libs
+}
