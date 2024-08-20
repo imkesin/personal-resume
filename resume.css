@@ -1,5 +1,5 @@
 body {
-  padding: 2em 2em 0 2em;
+  padding: 2rem;
   background-image: linear-gradient(45deg, #EEE 0%, #888 100%);
   display: grid;
   justify-content: center;
@@ -9,7 +9,7 @@ main {
   border-radius: 1%;
   background: white;
   aspect-ratio: 8.5 / 11;
-  padding: 2em;
+  padding: 2rem;
   min-width: 80ch;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
@@ -20,22 +20,22 @@ h3,
 h4,
 h5,
 p {
-  margin: 0 0 0.25em 0;
+  margin: 0 0 0.25rem 0;
 }
 
 h1 {
   font-family: 'Bebas Neue';
-  font-size: 77;
+  font-size: 5rem;
 }
 
 h2 {
   font-family: 'Bebas Neue';
-  font-size: 35;
+  font-size: 2.5rem;
 }
 
 h3 {
   font-family: 'Montserrat';
-  font-size: 28;
+  font-size: 2rem;
 }
 
 span.location-details {
@@ -52,22 +52,14 @@ span.team-details {
 
 h4 {
   font-family: 'Montserrat';
-  font-style: italic;
-  font-size: 22;
+  font-size: 1.5rem;
   font-weight: 300;
 }
 
-h5 {
-  font-family: 'Montserrat';
-  font-size: 14;
-  font-weight: 100;
-}
-
-
 p {
   font-family: 'Montserrat';
-  font-size: 16;
   max-width: 60ch;
+  text-wrap: pretty;
 }
 
 p.low-importance {
@@ -76,13 +68,13 @@ p.low-importance {
 }
 
 p + p {
-  margin-top: 1em;
+  margin-top: 1rem;
 }
 
 section {
   display: grid;
-  grid-template-columns: minmax(auto, 20ch) minmax(80ch, 1fr);
-  column-gap: 2em;
+  grid-template-columns: minmax(auto, 24ch) minmax(80ch, 1fr);
+  column-gap: 2rem;
 }
 
 section.name-section {
@@ -102,11 +94,11 @@ div.contact-details {
 }
 
 div.contact-details > * {
-  margin-right: 1em;
+  margin-right: 1rem;
 }
 
 section.generic-section {
-  padding-top: 2em;
+  padding-top: 2rem;
   grid-template-areas:
     ". title"
     "content content"
@@ -129,20 +121,21 @@ section.experience-section {
 }
 
 section.experience-section + section.experience-section {
-  margin-top: 2em;
+  margin-top: 2rem;
 }
 
 section.experience-section.internship {
   filter: opacity(70%);
 }
 
-h5.date {
+.date {
   grid-area: date;
   justify-self: end;
   align-self: center;
+  text-align: right;
 }
 
-h4.company {
+.company {
   grid-area: company;
 }
 
@@ -155,7 +148,7 @@ section.skills-section {
     ". languages"
     ". tools-libs"
   ;
-  row-gap: 1em;
+  row-gap: 1rem;
 }
 
 .languages {
