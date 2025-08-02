@@ -1,4 +1,11 @@
 body {
+  --color-accent-11: #1A795D;
+  --color-accent-12: #0D4534;
+
+  --color-grey-10: #7C8481;
+  --color-grey-11: #5F6563;
+  --color-grey-12: #1A211E;
+
   padding: 2rem;
   background-image: linear-gradient(45deg, #EEE 0%, #888 100%);
   display: grid;
@@ -18,6 +25,14 @@ h1,
 h2,
 h3,
 h4,
+h5 {
+  color: var(--color-grey-12);
+}
+
+h1,
+h2,
+h3,
+h4,
 h5,
 p {
   margin: 0 0 0.25rem 0;
@@ -30,7 +45,7 @@ h1 {
 
 h2 {
   font-family: 'Bebas Neue';
-  font-size: 2.5rem;
+  font-size: 1.75rem;
 }
 
 h3 {
@@ -38,37 +53,60 @@ h3 {
   font-size: 2rem;
 }
 
-span.location-details {
-  font-family: 'Montserrat';
-  text-transform: uppercase;
-  font-size: 12;
-}
-
-span.team-details {
-  font-family: 'Montserrat';
-  text-transform: uppercase;
-  font-size: 14;
-}
-
 h4 {
   font-family: 'Montserrat';
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 300;
+}
+
+span {
+  font-family: 'Montserrat';
+  color: var(--color-grey-11);
+
+  &.contact-details {
+    font-size: 0.875rem;
+  }
+
+  &.location-details {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+  }
+
+  &.team-details {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+  }
 }
 
 p {
   font-family: 'Montserrat';
   max-width: 60ch;
   text-wrap: pretty;
+  color: var(--color-grey-11);
+
+  &.low-importance {
+    color: var(--color-grey-10);
+  }
+
+  & + p {
+    margin-top: 0.75rem;
+  }
 }
 
-p.low-importance {
-  filter: opacity(70%);
-  font-weight: 100;
+a {
+  color: var(--color-accent-11);
+
+  &:visited {
+    color: var(--color-accent-12);
+  }
 }
 
-p + p {
-  margin-top: 1rem;
+.lucide {
+  width: 1rem;
+  height: 1rem;
+
+  stroke-width: 1px;
+  color: --var(--color-grey-11);
 }
 
 section {
@@ -91,10 +129,8 @@ h1.name {
 div.contact-details {
   grid-area: contact-details;
   display: flex;
-}
-
-div.contact-details > * {
-  margin-right: 1rem;
+  gap: 1rem;
+  align-items: center;
 }
 
 section.generic-section {
@@ -105,7 +141,7 @@ section.generic-section {
   ;
 }
 
-h2.section-title {
+.section-title {
   grid-area: title;
 }
 
@@ -146,15 +182,17 @@ div.experience-details {
 section.skills-section {
   grid-template-areas:
     ". languages"
-    ". tools-libs"
+    ". other"
   ;
   row-gap: 1rem;
+
+  & > .languages {
+    grid-area: languages;
+  }
+
+  & > .other {
+    grid-area: other;
+  }
 }
 
-.languages {
-  grid-area: languages
-}
 
-.tools-libs {
-  grid-area: tools-libs
-}
